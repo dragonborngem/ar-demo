@@ -10,7 +10,7 @@ import (
 
 func route() *mux.Router {
 	r := mux.NewRouter().StrictSlash(true)
-	r.PathPrefix("/").Handler(http.StripPrefix("/", http.FileServer(http.Dir("./"))))
+	r.PathPrefix("/demo/").Handler(http.StripPrefix("/demo/", http.FileServer(http.Dir("./"))))
 	return r
 }
 
