@@ -1,1 +1,1 @@
-web: bin/ar-demo
+web: bin/ar-tech-demo
