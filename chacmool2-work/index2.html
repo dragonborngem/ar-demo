@@ -1,0 +1,221 @@
+<!--
+/**
+ * Copyright 2018 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="description" content="Introducing G-HUT, a sweet new take on a home.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <title>Chacmool</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" type="text/css" href="third_party/dialog-polyfill/dialog-polyfill.css">
+  <link rel="stylesheet" type="text/css" href="third_party/material-design-lite/material.min.css">
+  <link rel="stylesheet" type="text/css" href="css/app.css">
+</head>
+
+<body>
+  <div id="wrapper">
+  <div id="header">
+    <i id="back-icon" class="material-icons">arrow_back</i>
+    <img id="google-arts-culture" src="images/google-arts-culture.png"></img>
+    <i id="search-icon" class="material-icons">search</i>
+  </div>
+  <div id="feature">
+    <img id="feature-image" src="images/chacmool.jpg"></img>
+  </div>
+  <div id="information">
+    <div id="information-title">A Chacmool figure holding a bowl in the ruins of Templo Mayor in Mexico City</div>
+    <div id="information-author">From the collection of CyArk</div>
+    <div id="information-icons">
+      <a href="https://artsandculture.google.com/partner/cyark"><img id="information-credit" src="images/cyark.webp"></img></a>
+      <div id="information-space">
+      </div>
+      <div id="information-heart">
+        <button id="favorite-button" class="mdl-button mdl-js-button mdl-button--icon ">
+          <i class="material-icons">favorite</i>
+        </button>
+      </div>
+      <div id="information-space">
+      </div>
+      <div id="information-share">
+        <button id="share-button" class="mdl-button mdl-js-button mdl-button--icon">
+          <i class="material-icons">share</i>
+        </button>
+      </div>
+    </div>
+    <div class="spacer"></div>
+    <div id="information-details-title">Details</div>
+    <div id="information-details">
+      Sculpture representing a Chac Mool in its characteristic position, reclining in a pose difficult to keep, with bent arm and legs and the head completely turn to one side. He holds a cuauhxicalli, or offering vessel over his stomach. The rim of the vessel is ornamented with feather and jewel glyphs. The character is luxuriously attired with large circular earflaps, bracelets, and bangles made of green stone beads, and a three string necklace equally made of green stone beads from which a trapezoidal ornament that seems to represent an ancient object or a relic hangs.
+    </div>
+  </div>
+  <div class="spacer"></div>
+  <div id="container-details-title">3D Content</div>
+  <div id="container" class="container">
+    <button id="exit-ar-button" class="mdl-button mdl-js-button mdl-button--fab">
+      <img id="exit-ar-button-icon" src="images/icons/ic_close_white_2x_web_36dp.png"></img>
+    </button>
+    <button id="show-ar-annotations-button" class="mdl-button mdl-js-button mdl-button--fab">
+      <img id="show-ar-annotations-button-icon" src="images/icons/ic_location_on_white_36dp_2x.png"></img>
+    </button>
+    <button id="hide-ar-annotations-button" class="mdl-button mdl-js-button mdl-button--fab">
+      <img id="hide-ar-annotations-button-icon" src="images/icons/ic_location_off_white_36dp_2x.png"></img>
+    </button>
+    <button id="enter-ar-button" class="mdl-button mdl-js-button mdl-button--fab">
+      <img id="enter-ar-button-icon" src="images/icons/ic_view_in_ar_white_2x_web_36dp.png"></img>
+    </button>
+    <button id="enter-fs-button" class="mdl-button mdl-js-button mdl-button--fab">
+      <img id="enter-fs-button-icon" src="images/icons/ic_fullscreen_white_2x_web_36dp.png"></img>
+    </button>
+    <button id="exit-fs-button" class="mdl-button mdl-js-button mdl-button--fab">
+      <img id="exit-fs-button-icon" src="images/icons/ic_close_white_2x_web_36dp.png"></img>
+    </button>
+    <div id="canvas-loader" class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></div>
+    <canvas id="gl-canvas"></canvas>
+  </div>
+  <div id="more-information-details">
+    He wears sandals with heelpieces ornamented by little tecpatls (personified sacrificial knives) and a headdress of long feathers hanging down behind covering his back. The face of the character is covered by a variation of Tláloc’s rain mask in which his blinkers and long fangs can be identified. In the bottom of the sculpture there is an aquatic scene carved in bas-relief, where the figure of the god Tláloc is crouching in a Tlaltecuhtli, Lord of the Land, style. The god is surrounded by elements that suggest the aquatic and cold environment of the underworld. The sculpture was masterfully made in the so-called Aztec Imperial style. Sculptures of Chac Mool related to the worship to Tláloc, the rain god, have been found in Tenochtitlan, on the top of Templo Mayor.
+  </div>
+  <div class="spacer"></div>
+  <div id="specifications">
+    <div id="specifications-details-title">Specifications</div>
+    <div id="specifications-details">
+      <p class="specifications-detail"><span class="specifications-details-subtitle">Title:</span> Chac Mool</p>
+      <p class="specifications-detail"><span class="specifications-details-subtitle">Creator:</span> Unknown</p>
+      <p class="specifications-detail"><span class="specifications-details-subtitle">Date Created:</span> 1250/1500</p>
+      <p class="specifications-detail"><span class="specifications-details-subtitle">Location:</span> Mexico City, Mexico</p>
+      <p class="specifications-detail"><span class="specifications-details-subtitle">Physical Dimensions:</span> w1.178 x h0.815 x d0.498 m</p>
+      <p class="specifications-detail"><span class="specifications-details-subtitle">Period:</span> Posclásico Tardío (1250-1521 d.C.)</p>
+      <p class="specifications-detail"><span class="specifications-details-subtitle">Type:</span> <a href="https://artsandculture.google.com/entity/m06msq">Sculpture</a></p>
+      <p class="specifications-detail"><span class="specifications-details-subtitle">Medium:</span> <a href="https://artsandculture.google.com/entity/m0bxps">Basalto</a></p>
+      <p class="specifications-detail"><span class="specifications-details-subtitle">Credit:</span> <a href="https://artsandculture.google.com/partner/cyark">CyArk</a></p>
+    </div>
+  </div>
+  <div class="spacer"></div>
+  <div id="recommended">
+    <div id="recommended-details-title">Recommended</div>
+    <div id="recommended-tiles">
+      <a href="https://artsandculture.google.com/asset/guerrero-jaguar/BwFdOP9jvNwlXg"><img id="recommended-tile1" src="images/jaguar.png"></img></a>
+      <a href="https://artsandculture.google.com/asset/xiuhmolpilli/7QHQcSkxtXRSYA"><img id="recommended-tile2" src="images/xiuhmolpilli.png"></img></a>
+    </div>
+    <div id="recommended-chips">
+      <span class="mdl-chip">
+      <span class="mdl-chip__text">Basalt</span>
+      </span>
+      <div class="chip-space"></div>
+      <span class="mdl-chip">
+      <span class="mdl-chip__text">Rock</span>
+      </span>
+      <div class="chip-space"></div>
+      <span class="mdl-chip">
+      <span class="mdl-chip__text">Sculpture</span>
+      </span>
+      <div class="chip-space"></div>
+      <span class="mdl-chip">
+      <span class="mdl-chip__text">Mexico</span>
+      </span>
+    </div>
+  </div>
+  <div class="spacer"></div>
+  <div id="credits-details-title">Credits</div>
+  <div id="credits-details">
+    3D documentation was completed by CyArk in collaboration with INAH in 2016
+  </div>
+  <dialog id="Cuauhxicalli" class="mdl-dialog">
+    <h3 class="mdl-dialog__title">Cuauhxicalli</h3>
+    <div class="mdl-dialog__content">
+      <p>
+        He holds a cuauhxicalli, or offering vessel over his stomach. The rim of the vessel is ornamented with feather and jewel glyphs.
+      </p>
+    </div>
+    <div class="mdl-dialog__actions">
+      <button type="button" class="mdl-button close">Close</button>
+    </div>
+  </dialog>
+  <dialog id="Head" class="mdl-dialog">
+    <h3 class="mdl-dialog__title">Orientation</h3>
+    <div class="mdl-dialog__content">
+      <p>The 90-degree head orientation is typical of other chacmools from the same time period, as is the pose, which is helpless, almost defenseless, humble, with bent knees and arms. Other forms of art from the same period use this type of pose to symbolize a prisoner.
+      </p>
+    </div>
+    <div class="mdl-dialog__actions">
+      <button type="button" class="mdl-button close">Close</button>
+    </div>
+  </dialog>
+  <dialog id="Posture" class="mdl-dialog">
+    <h3 class="mdl-dialog__title">Seated Posture</h3>
+    <div class="mdl-dialog__content">
+      <p>
+        Chacmool in its characteristic position, reclining in a pose difficult to keep, with bent arm and legs and the head completely turn to one side.
+      </p>
+    </div>
+    <div class="mdl-dialog__actions">
+      <button type="button" class="mdl-button close">Close</button>
+    </div>
+  </dialog>
+  <dialog id="Symbols" class="mdl-dialog">
+    <h3 class="mdl-dialog__title">Symbols & Iconography</h3>
+    <div class="mdl-dialog__content">
+      <p>
+        On Chacmools celebrating the rain god, it’s common to see rain god iconography - frogs, marine life, etc.
+      </p>
+    </div>
+    <div class="mdl-dialog__actions">
+      <button type="button" class="mdl-button close">Close</button>
+    </div>
+  </dialog>
+  <dialog id="Feet" class="mdl-dialog">
+    <h3 class="mdl-dialog__title">Red feet</h3>
+    <div class="mdl-dialog__content">
+      <p>
+        The feet are red with a hint of blue at the sandals. This coloring actually helped researchers connect this type of Chacmool with Tlaloc by matching the coloring in books from the same period in Central Mexico.
+      </p>
+    </div>
+    <div class="mdl-dialog__actions">
+      <button type="button" class="mdl-button close">Close</button>
+    </div>
+  </dialog>
+
+  <dialog id="Chacmool" class="mdl-dialog">
+    <h3 class="mdl-dialog__title">Chacmool</h3>
+    <div class="mdl-dialog__content">
+      <p>
+        Sculpture representing a Chac Mool in its characteristic position, reclining in a pose difficult to keep, with bent arm and legs and the head completely turn to one side.
+      </p>
+    </div>
+    <div class="mdl-dialog__actions">
+      <button type="button" class="mdl-button close">Close</button>
+    </div>
+  </dialog>
+  </div>
+  <script src="third_party/babel-polyfill/polyfill.js"></script>
+  <script src="third_party/dialog-polyfill/dialog-polyfill.js"></script>
+  <script src="third_party/material-design-lite/material.min.js"></script>
+  <script src="third_party/zlib.js/inflate.min.js"></script>
+  <script src="third_party/stats.js/stats.min.js"></script>
+  <script src="third_party/three.js/three.min.js"></script>
+  <script src="third_party/three.js/OrbitControls.js"></script>
+  <script src="third_party/three.js/FBXLoader.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>
