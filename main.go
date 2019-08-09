@@ -11,6 +11,7 @@ import (
 func route() *mux.Router {
 	r := mux.NewRouter().StrictSlash(true)
 	r.PathPrefix("/demo/").Handler(http.StripPrefix("/demo/", http.FileServer(http.Dir("./"))))
+	r.PathPrefix("/webxr/").Handler(http.StripPrefix("/webxr/", http.FileServer(http.Dir("./webxr-samples"))))
 	return r
 }
 
