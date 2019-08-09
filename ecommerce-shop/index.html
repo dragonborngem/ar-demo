@@ -22,22 +22,23 @@
     <script src="OrbitControls.js"></script>
     <h1>Test store</h1>
     <div id="div1" style="height:400px;width:400px"></div>
-    <div id="div2"></div>
+    <div id="div2" style="height:400px;width:400px"></div>
     <script>
         let scene, camera, renderer;
 
-        function init() {
-            scene = new THREE.Scene();
-            scene.background = new THREE.Color(0xdddddd)
+        scene = new THREE.Scene();
+        scene.background = new THREE.Color(0xdddddd)
 
-            camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight)
-            camera.rotation.y = 45 / 180 * Math.PI;
-            camera.position.x = 800;
-            camera.position.y = 100;
-            camera.position.z = 1000;
+        camera = new THREE.PerspectiveCamera(40, 400 / 400)
+        camera.rotation.y = 45 / 180 * Math.PI;
+        camera.position.x = 800;
+        camera.position.y = 100;
+        camera.position.z = 1000;
 
-            var d1 = document.getElementById("div1")
+        function init(id) {
 
+            var d1 = document.getElementById(id)
+            //camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight)
             controls = new THREE.OrbitControls(camera, d1)
             controls.addEventListener('change', renderer)
 
@@ -68,7 +69,8 @@
             renderer = new THREE.WebGLRenderer({
                 antialias: true
             });
-            renderer.setSize(window.innerWidth, window.innerHeight);
+            //renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setSize(d1.offsetWidth, d1.offsetHeight);
             d1.appendChild(renderer.domElement)
             // document.body.appendChild(renderer.domElement)
 
@@ -85,7 +87,8 @@
             renderer.render(scene, camera)
             requestAnimationFrame(animate)
         }
-        init();
+        init('div1');
+        //  init('div2');
     </script>
 </body>
 
